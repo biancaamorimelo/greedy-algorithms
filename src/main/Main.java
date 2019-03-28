@@ -12,11 +12,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         // Entrada
-        //String entrada = "instancias/dij10.txt";
-        String entrada = "instancias/dij20.txt";
-        //String entrada = "instancias/dij40.txt";
-        //String entrada = "instancias/dij50.txt";
-
+        String entrada = "instancias/dij10.txt";   
+        
         // Le a entrada e retorna a representacao do grafo em matriz
         int[][] matriz = construirRepMatriz(entrada);
 

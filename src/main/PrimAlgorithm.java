@@ -13,20 +13,21 @@ public class PrimAlgorithm {
 	
 	List<Vertice> vertices;
 
+	// Construtor com parametros sendo o grafo representado em forma de lista de adjacência e em matriz
     public PrimAlgorithm(List<Vertice> adjacencia, int[][] representacaoMatriz) {
-        this.vertices = adjacencia;
-        
-        this.inicializaVertices();
-        
+        this.vertices = adjacencia;       
+        this.inicializaVertices();        
         this.spanningTree(this.vertices.toArray(new Vertice[0]), representacaoMatriz, 0);
     }
 
+    //Inicializa todos os vértices com valor infinito
     private void inicializaVertices() {
         for (Vertice v : this.vertices) {
             v.valor = Integer.MAX_VALUE;
         }
     }
-
+    
+    // Função principal pra construção da Minimal Spanning Tree 
     private void spanningTree(Vertice[] listaVertices, int[][] formatoMatriz, int inicial) {
         int numeroVertices = this.vertices.size();
         
